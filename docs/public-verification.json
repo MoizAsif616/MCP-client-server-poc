@@ -1,0 +1,14 @@
+{
+  "public_url": "https://aa0a95cb36f572.lhr.life",
+  "checks": {
+    "https_health": true,
+    "challenge": true,
+    "public_resource": true,
+    "public_oauth_urls": true,
+    "synthetic_signup": true,
+    "https_oauth_and_discovery": true,
+    "https_tool_call": true,
+    "https_hidden_tool_denied": true
+  },
+  "claude_ai_live_test": "not performed; user will test"
+}

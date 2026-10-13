@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Allow client access?</h1><p>Signed in as <strong>{{ user.email }}</strong></p>
+<article><h2>{{ client.client_name }}</h2><p>Registered client ID: <code>{{ client.client_id }}</code></p>
+<p>Return to: <strong>{{ callback_host }}</strong></p><p>Callback: <code>{{ params.redirect_uri }}</code></p>
+<p>Resource: <code>{{ params.resource }}</code></p><p>Requested scopes: <strong>{{ params.scope }}</strong></p>
+<p>This client may use tools permitted by your selected roles. Its name is supplied during registration.</p></article>
+<form method="post" action="/consent"><input type="hidden" name="csrf" value="{{ csrf }}"><input type="hidden" name="request" value="{{ ticket }}">
+<div class="actions"><button name="decision" value="allow">Allow access</button><button class="secondary" name="decision" value="deny">Deny</button></div></form>
+{% endblock %}

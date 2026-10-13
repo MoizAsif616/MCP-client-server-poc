@@ -1,0 +1,25 @@
+{
+  "checks": {
+    "duplicate_start_rejected": true,
+    "owned_backend_and_agent_stopped": true,
+    "occupied_backend_port_rejected_without_killing_owner": true,
+    "owned_ports_closed": true,
+    "other_local_backends_preserved": true,
+    "restart_without_token_entry": true,
+    "persistent_account_and_note": true,
+    "normal_token_lifetime_restored": true,
+    "restarted_https_sdk_call": true
+  },
+  "public_url": "https://portless-unelderly-nigel.ngrok-free.dev",
+  "mcp_url": "https://portless-unelderly-nigel.ngrok-free.dev/mcp",
+  "database": "D:\\MCP-client-server-POC\\data\\ngrok-demo.sqlite3",
+  "demo_email": "ngrok-demo-04d8ed2454@example.test",
+  "demo_password": "demo-pass",
+  "preserved_local_services": {
+    "8000": {
+      "status": "ok",
+      "server": "Learning MCP"
+    }
+  },
+  "claude_ai_live_integration": "Prepared for user; not performed"
+}

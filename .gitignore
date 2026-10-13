@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+.pytest_cache/
+data/
+logs/
+client/tokens/
+runtime/
+docs/*.jsonl
+client/servers-public.json
+client/servers-ngrok.json
+.env
+.env.*
+*.log

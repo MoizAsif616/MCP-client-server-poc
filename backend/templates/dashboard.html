@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="heading"><div><h1>Your MCP access</h1><p>{{ user.email }}</p></div>
+<form method="post" action="/logout"><input type="hidden" name="csrf" value="{{ csrf }}"><button class="secondary">Log out</button></form></div>
+<h2>Your roles</h2><div class="badges">{% for role in user.roles %}<span>{{ role_labels[role] }}</span>{% endfor %}</div>
+<h2>Permitted tools</h2><div class="tool-list">{% for tool in tools %}<article><strong>{{ tool.name }}</strong><p>{{ tool.description }}</p></article>{% endfor %}</div>
+<h2>Shared MCP URL</h2><div class="url-row"><input id="mcp-url" readonly value="{{ resource }}" aria-label="MCP URL"><button id="copy-url" type="button">Copy</button></div><p id="copy-status" aria-live="polite"></p>
+<h2>Connect our Python client</h2><p>Put this URL in <code>client/servers.json</code>, then run <code>python -m client list</code>. Your browser opens for login and consent. Each client gets its own tokens.</p>
+<h2>Connect Claude.ai</h2><p>In Customize → Connectors, add a custom connector with the public HTTPS MCP URL. Select OAuth sign-in and “Register automatically.” Log in here and allow access. Start a conversation and enable the connector.</p>
+<p class="muted">For Claude.ai, run the free tunnel first. Local tests are verified; the live Claude.ai connection is prepared for you to test.</p>
+<script src="/static/dashboard.js" defer></script>
+{% endblock %}
